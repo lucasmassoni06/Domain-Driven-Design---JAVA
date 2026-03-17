@@ -23,7 +23,7 @@ public class FolhaDePagamentoJOP {
             liquido = bruto - (salarioinss + saude);
             resultado = String.format("O salário liquido é: %.2f,%nO salário bruto é de: %.2f,%nO desconto do INSS é de: %.2f,%nO valor do plano de saúde é de %.2f,%nO número de dependetes é de: %d ", liquido, bruto, inss, plano, dependentes);
             JOptionPane.showMessageDialog(null, resultado);
-        } catch (HeadlessException e) {''
+        } catch (HeadlessException e) {
             JOptionPane.showMessageDialog(null,"Digite um valor válido!");
         }
     }
