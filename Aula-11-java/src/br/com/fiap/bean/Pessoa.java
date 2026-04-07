@@ -13,9 +13,10 @@ public class Pessoa {
 
     public Pessoa() {
     }
-    public Pessoa(String nome,LocalDate dataNascimento) {
+
+    public Pessoa(String nome, LocalDate dataNascimento) {
         this.nome = nome;
-        this.dataNascimento =dataNascimento;
+        this.dataNascimento = dataNascimento;
     }
 
     // getters e setters
@@ -36,9 +37,9 @@ public class Pessoa {
         try {
             LocalDate inicio = LocalDate.parse("1899-12-31");
             LocalDate fim = LocalDate.now().plusDays(1);
-            if(dataNascimento.isAfter(inicio) && dataNascimento.isBefore(fim)) {
+            if (dataNascimento.isAfter(inicio) && dataNascimento.isBefore(fim)) {
                 this.dataNascimento = dataNascimento;
-            }else {
+            } else {
                 throw new Exception("Data fora da faixa permitida!");
             }
         } catch (Exception e) {
@@ -48,10 +49,9 @@ public class Pessoa {
     }
 
     //metodos da classe
-    public int calcularIdade(){
+    public int calcularIdade() {
         LocalDate dataAtual = LocalDate.now();
         Period idade = Period.between(dataNascimento, dataAtual);
         return idade.getYears();
-    }
-}
+    }}
 
