@@ -30,6 +30,6 @@ public class Funcionario {
     }
 
     public float calcularSalario(){
-        (valorHoradeTrabalho
+        return (valorHoradeTrabalho);
     };
 }
