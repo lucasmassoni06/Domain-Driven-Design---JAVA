@@ -14,7 +14,7 @@ public class ExemploHashMap {
                     if(!sigla.equals("FIM")) {
                         estado = JOptionPane.showInputDialog("Digite o nome completo do seu estado informado anteriormente");
                         if (mapa.containsKey(sigla)) {
-                            JOptionPane.showConfirmDialog(null, "Esse Estado ja foi cadastrado!0");
+                            JOptionPane.showConfirmDialog(null, "Esse Estado ja foi cadastrado!");
                         } else {
                             mapa.put(sigla, estado);
                         }

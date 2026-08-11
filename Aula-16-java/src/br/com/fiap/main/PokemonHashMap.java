@@ -2,41 +2,41 @@ package br.com.fiap.main;
 
 import javax.swing.*;
 import java.util.HashMap;
+import java.util.Map;
 
 public class PokemonHashMap {
     public static void main(String[] args) {
-        HashMap<String, String> mapa = new HashMap<String, String>();
+        HashMap<String, String> pokemon = new HashMap<>();
         do {
             try {
-                String tipo, pokemon;
+                String tipo, nome;
                 do {
-                    tipo = JOptionPane.showInputDialog(null, "Digite o tipo do seu pokemon ou digite \"fim\" para finalizar").toUpperCase();
+                    nome = JOptionPane.showInputDialog(null, "Digite o nome do seu pokemon ou digite \"fim\" para finalizar").toUpperCase();
 
-                    if (!tipo.equals("FIM")) {
-                        pokemon = JOptionPane.showInputDialog(null, "Digite o nome do seu pokemon: ");
+                    if (!nome.equals("FIM")) {
+                        tipo = JOptionPane.showInputDialog(null, "Digite o tipo do seu pokemon: ").toUpperCase();
 
-                        if (mapa.containsKey(tipo)) {
-
-                            if (mapa.get(tipo).contains(pokemon)) {
+                        if (pokemon.containsKey(nome)) {
                                 JOptionPane.showConfirmDialog(null, "Esse pokemon ja foi registrado!");
-                            } else {
-                                mapa.put(tipo, mapa.get(tipo) + ", " + pokemon);
-                            }
-
                         } else {
-                            mapa.put(tipo, pokemon);
+                            pokemon.put(nome, tipo);
                         }
 
                     }
 
-                } while (!tipo.equals("FIM"));
+                } while (!nome.equals("FIM"));
 
-                String mostrar = JOptionPane.showInputDialog("Qual tipo deseja vizualizar?");
+                String mostrar = JOptionPane.showInputDialog("Qual tipo deseja vizualizar?").toUpperCase();
+                String nomesEncontrados = "";
+                for (Map.Entry<String, String> entrada : pokemon.entrySet()) {
+                    if (entrada.getValue().equals(mostrar)){
+                        nomesEncontrados += entrada.getKey() + "\n";
+                    }
+                }
 
-                if (mapa.containsKey(mostrar.toUpperCase())) {
+                if (!nomesEncontrados.isEmpty()) {
                     JOptionPane.showMessageDialog(
-                            null,
-                            "Do tipo " + mostrar + " tem os seguintes pokemons: \n" + mapa.get(mostrar.toUpperCase())
+                            null, "Do tipo " + mostrar + " tem os seguintes pokemons: \n" + nomesEncontrados
                     );
                 } else {
                     JOptionPane.showMessageDialog(null, "Tipo não encontrado!", "Atenção!", JOptionPane.WARNING_MESSAGE);
