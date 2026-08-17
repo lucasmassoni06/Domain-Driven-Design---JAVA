@@ -30,7 +30,7 @@ public class PokemonComStream {
         do{
             escolha = JOptionPane.showInputDialog("Qual tipo deseja vizualizar?");
             if (listaPokemon.containsKey(escolha)){
-                JOptionPane.showMessageDialog(null, "O tipo escolhido foi " + escolha + " E tem os seguintes pokemons" + listaPokemon.c;
+
             }else{
                 JOptionPane.showMessageDialog(null, "Tipo de pokemon não existente!");
             }
