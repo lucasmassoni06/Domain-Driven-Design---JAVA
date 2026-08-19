@@ -1,4 +1,4 @@
-package br.com.fiap.main;
+package br.com.fiap.aula.bean.main;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

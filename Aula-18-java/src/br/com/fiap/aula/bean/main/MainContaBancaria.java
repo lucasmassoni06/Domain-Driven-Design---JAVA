@@ -1,7 +1,7 @@
-package br.com.fiap.main;
+package br.com.fiap.aula.bean.main;
 
-import br.com.fiap.bean.ContasBancarias;
-import br.com.fiap.exceptions.SaldoInsuficienteException;
+import br.com.fiap.aula.bean.ContasBancarias;
+import br.com.fiap.aula.bean.exceptions.SaldoInsuficienteException;
 
 public class MainContaBancaria {
     static void main(){

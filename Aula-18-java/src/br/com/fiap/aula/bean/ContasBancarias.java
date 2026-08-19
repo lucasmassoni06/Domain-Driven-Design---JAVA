@@ -1,6 +1,6 @@
-package br.com.fiap.bean;
+package br.com.fiap.aula.bean;
 
-import br.com.fiap.exceptions.SaldoInsuficienteException;
+import br.com.fiap.aula.bean.exceptions.SaldoInsuficienteException;
 
 public class ContasBancarias {
     private double saldo;
